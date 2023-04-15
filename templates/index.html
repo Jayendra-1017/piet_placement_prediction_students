@@ -66,18 +66,11 @@
               transition: 0.5s;
               cursor: pointer;
             }
-
-            .tail{
-                text-align: center;
-                color: #e01212;
-            }
+        
             .navigation .toggle.active {
               background: #2196f3;
             }
-            .col-md-433{
-                max-width: 700px;
-                margin-left: 400px;
-            }
+        
             .navigation .toggle::before {
               content: '+';
               position: absolute;
@@ -156,7 +149,6 @@
               background-color: red;
               color: white;
               text-align: center;
-              margin-bottom: 0px;
             }
         
             body {
@@ -241,7 +233,7 @@
             }
         
             body {
-              background-image: linear-gradient(to right, dodgerblue, rgb(86, 207, 247));
+              background-image: linear-gradient(to right, dodgerblue, darkblue);
             }
         .mr{
           background: red;
@@ -249,47 +241,12 @@
         }
         .col-12{
             display: grid;
-           max-width: 700px;
-           margin-left: 400px;
-            
             
         }
            .place{
-            color: black;
-            text-align: center;
+            color: #e01212;
+            
            }
-           .but{
-            margin: 76px;
-           }
-           #b1{
-            margin: 40px 20px;
-            border-radius: 20px;
-           }
-           #b2{
-            margin: 40px 20px;
-            border-radius: 20px;
-           }
-           #b3{
-            margin: 40px 20px;
-            border-radius: 20px;
-           }
-           #b4{
-            margin: 40px 20px;
-            border-radius: 20px;
-           }
-           #b5{
-            margin: 40px 20px;
-            border-radius: 20px;
-           }
-           #b6{
-            margin: 40px 20px;
-            border-radius: 20px;
-           }
-           #b7{
-            margin: 40px 20px;
-            border-radius: 20px;
-           }
-
           </style>
 </head>
 
@@ -310,67 +267,86 @@
     <div class="form1">
         <form action="{{ url_for('predict')}} "method="get" class="row g-3 my-4">
 
-            <div class="col-12" style="color: black;">
+            <div class="col-12" style="color: #FFF;">
                 <label for="floatingInput" class="form-label">Marks of Class 10</label>
                 <input type="number" class="form-control" id="ten" name="ten" step="any" required="required" placeholder="Enter the percentage of your 10th class">
             </div>
 
-            <div class="col-12" style="color: black;">
+            <div class="col-12" style="color: #FFF;">
                 <label for="floatingInput" class="form-label">Marks of Class 12</label>
                 <input type="number" class="form-control" id="twell" name="twell" step="any" required="required" placeholder="Enter the percentage of 12th class">
             </div>
 
-            <div class="col-12" style="color: black;">
+            <div class="col-12" style="color: #FFF;">
                 <label for="floatingInput" class="form-label">Marks of Btech</label>
                 <input type="number" class="form-control" id="btech" name="btech" step="any" required="required" placeholder="Enter the marks of Btech here">
             </div>
 
-            <div class="col-12" style="color: black;">
+            <div class="col-12" style="color: #FFF;">
                 <label for="floatingInput" class="form-label">Marks of 7<i class="fa fa-superscript" aria-hidden="true">th</i> SEM</label>
                 <input type="number" class="form-control" id="seven" name="seven" step="any" required="required" placeholder="Enter the marks of 7th SEM">
             </div>
 
-            <div class="col-12" style="color: black;">
+            <div class="col-12" style="color: #FFF;">
                 <label for="floatingInput" class="form-label">Marks of 6<i class="fa fa-superscript" aria-hidden="true">th</i> SEM</label>
                 <input type="number" class="form-control" id="six" name="six" step="any" required="required" placeholder="Enter the marks of 6th SEM">
             </div>
 
-            <div class="col-12" style="color: black;">
+            <div class="col-12" style="color: #FFF;">
                 <label for="floatingInput" class="form-label">Marks of 5<i class="fa fa-superscript" aria-hidden="true">th</i> SEM </label>
                 <input type="number" class="form-control" id="five" name="five" step="any" required="required" placeholder="Enter the marks of 5th SEM">
             </div>
 
-            <div class="col-12" style="color: black;">
+            <div class="col-12" style="color: #FFF;">
                 <label for="floatingInput" class="form-label">Final performance </label>
                 <input type="number" class="form-control" id="final" name="final" step="any" required="required" placeholder="Enter the final perfomance here">
             </div>
 
-            <div class="col-md-433" style="color: black;">
+            <div class="col-md-4" style="color: #FFF;">
                 <label for="inputState" class="form-label">Medium</label>
                 <select id="med" name ="med" step = "any" class="form-select" required>
                     <option selected>1</option>
                     <option>2</option>
                 </select>
             </div>
-            <div class="but">
-
-            
             <div class="btn-group" role="group" aria-label="Basic example">
-                <button type="button" class="btn btn-primary" id="b1">Random Forest Classifier</button>
-                <button type="button" class="btn btn-secondary" id="b2">Decision Tree Classifier</button>
-                <button type="button" class="btn btn-outline-danger" id="b3">KNN Classifier</button>
-                <button type="button" class="btn btn-outline-warning" id="b4">Logistic Classifier</button>
+                <button type="button" class="btn btn-secondary">Random Forest Classifier</button>
+                <button type="button" class="btn btn-secondary">Decision Tree Classifier</button>
+                <button type="button" class="btn btn-secondary">KNN Classifier</button>
+                <button type="button" class="btn btn-secondary">Logistic Classifier</button>
 
-                <button type="button" class="btn btn-dark" id="b5">Kernel SVM Classifier</button>
+                <button type="button" class="btn btn-secondary">Kernel SVM Classifier</button>
 
-                <button type="button" class="btn btn-outline-light" id="b6">SVM Classifier</button>
-                <button type="button" class="btn btn-info" id="b7">Naive Bayes Classifier</button>
+                <button type="button" class="btn btn-secondary">SVM Classifier</button>
+                <button type="button" class="btn btn-secondary">Naive Bayes Classifier</button>
 
-            </div>
+
               </div>
            
 
-            
+            <div class="col-12">
+                <button type="submit" class="btn btn-outline-danger">Decision Tree Classifier</button>
+            </div>
+
+            <div class="col-12">
+                <button type="submit" class="btn btn-outline-danger">KNN Classifier</button>
+            </div>
+
+            <div class="col-12">
+                <button type="submit" class="btn btn-outline-danger">Logistic Classifier</button>
+            </div>
+
+            <div class="col-12">
+                <button type="submit" class="btn btn-outline-danger">Kernel SVM Classifier</button>
+            </div>
+
+            <div class="col-12">
+                <button type="submit" class="btn btn-outline-danger">SVM Classifier</button>
+            </div>
+
+            <div class="col-12">
+                <button type="submit" class="btn btn-outline-danger">Naive Bayes Classifier</button>
+            </div>
         </form>
         
         
@@ -387,7 +363,7 @@
         
     </div>
     <div class="footer">
-    <footer class="container11">
+    <footer class="container">
 
         <p>©2023 Placementpridictor.com</a> <br><a href="#" style="color: #000000;">Back to top</a></p>
       </footer>
