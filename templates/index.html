@@ -247,6 +247,10 @@
             color: #e01212;
             
            }
+           #b1,#b2,#b3,#b4,#b5,#b6,#b7{
+            margin-right: 20px;
+            border-radius: 20px;
+           }
           </style>
 </head>
 
@@ -310,45 +314,21 @@
                 </select>
             </div>
             <div class="btn-group" role="group" aria-label="Basic example">
-                <button type="submit" class="btn btn-secondary">Random Forest Classifier</button>
-                <button type="submit" class="btn btn-secondary">Decision Tree Classifier</button>
-                <button type="submit" class="btn btn-secondary">KNN Classifier</button>
-                <button type="submit" class="btn btn-secondary">Logistic Classifier</button>
+                <button type="submit" class="btn btn-primary" id="b1">Random Forest Classifier</button>
+                <button type="submit" class="btn btn-secondary" id="b2">Decision Tree Classifier</button>
+                <button type="submit" class="btn btn-outline-danger" id="b3">KNN Classifier</button>
+                
+                <button type="submit" class="btn btn-outline-dark" id="b4">Logistic Classifier</button>
+                <button type="submit" class="btn btn-outline-warning" id="b5">Kernel SVM Classifier</button>
 
-                <button type="submit" class="btn btn-secondary">Kernel SVM Classifier</button>
-
-                <button type="submit" class="btn btn-secondary">SVM Classifier</button>
-                <button type="submit" class="btn btn-secondary">Naive Bayes Classifier</button>
+                <button type="submit" class="btn btn-info" id="b6">SVM Classifier</button>
+                <button type="submit" class="btn btn-outline-warning" id="b7">Naive Bayes Classifier</button>
 
 
               </div>
            
 
-            <div class="col-12">
-                <button type="submit" class="btn btn-outline-danger">Decision Tree Classifier</button>
-            </div>
-
-            <div class="col-12">
-                <button type="submit" class="btn btn-outline-danger">KNN Classifier</button>
-            </div>
-
-            <div class="col-12">
-                <button type="submit" class="btn btn-outline-danger">Logistic Classifier</button>
-            </div>
-
-            <div class="col-12">
-                <button type="submit" class="btn btn-outline-danger">Kernel SVM Classifier</button>
-            </div>
-
-            <div class="col-12">
-                <button type="submit" class="btn btn-outline-danger">SVM Classifier</button>
-            </div>
-
-            <div class="col-12">
-                <button type="submit" class="btn btn-outline-danger">Naive Bayes Classifier</button>
-            </div>
-        </form>
-        
+          
         
         <p style="color: #FFF;">
           {{prediction_text}}
