@@ -35,9 +35,9 @@ def predict():
     prediction = model_RF.predict([[ten, twell, btech, seven, six, five, final, med]])
     
     if prediction == [1]:   
-      return render_template('index.html', prediction_text='Congratulations you will be placed')
+      return render_template('index.html', prediction_text='Congratulations  🤩  you will be placed 🥳😀')
     else:
-      return render_template('index.html', prediction_text='Sorry you will not be placed, better luck next time')
+      return render_template('index.html', prediction_text='Sorry you will not be placed 😔, better luck next time')
 
 
 if __name__=="__main__":
